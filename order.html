@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order freshly baked goods from Sugar and Sweet’s Bakery. Available for pick-up and delivery.">
+    <meta name="keywords" content="Bakery, Cakes, Cupcakes, Cookies, Online Orders, Fresh Pastries">
+    <meta name="author" content="Sugar and Sweet's Bakery">
+    <title>Order Online - Sugar and Sweet's Bakery</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Sugar and Sweet's Bakery Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Our Menu</a></li>
+                <li><a href="order.html">Order Online</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="order-online">
+        <h1>Order Your Favorite Treats!</h1>
+        <p>Select from our menu and place your order online. We offer pick-up and delivery options.</p>
+        
+        <form id="order-form">
+            <!-- Input fields for order details -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="order-items">Order Details:</label>
+            <textarea id="order-items" name="order-items" rows="4" required></textarea>
+
+            <!-- Verification Checkboxes -->
+            <div>
+                <input type="checkbox" id="agree-policy">
+                <label for="agree-policy">I agree to the policies and terms.</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="not-robot">
+                <label for="not-robot">I confirm I am not a robot.</label>
+            </div>
+
+            <button type="submit" id="submit-order" disabled>Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sugar and Sweet’s Bakery</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const policyCheckbox = document.getElementById("agree-policy");
+            const robotCheckbox = document.getElementById("not-robot");
+            const submitButton = document.getElementById("submit-order");
+
+            function checkValidation() {
+                const isNameValid = nameInput.value.trim() !== "";
+                const isEmailValid = emailInput.value.trim() !== "";
+                const isChecked = policyCheckbox.checked && robotCheckbox.checked;
+
+                submitButton.disabled = !(isNameValid && isEmailValid && isChecked);
+            }
+
+            nameInput.addEventListener("input", checkValidation);
+            emailInput.addEventListener("input", checkValidation);
+            policyCheckbox.addEventListener("change", checkValidation);
+            robotCheckbox.addEventListener("change", checkValidation);
+
+            document.getElementById("order-form").addEventListener("submit", function (event) {
+                if (submitButton.disabled) {
+                    event.preventDefault();
+                    alert("Please fill in all required fields and confirm the checkboxes before placing an order.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

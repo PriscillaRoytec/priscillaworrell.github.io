@@ -1,0 +1,259 @@
+/* General Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFF7E6; /* Soft cream background */
+    color: #5C3D2E; /* Warm brown */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #F8C8DC; /* Soft pink */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #5C3D2E;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #D2691E; /* Chocolate */
+}
+
+/* Hero Section */
+#hero {
+    background-color: #FAE1DD; /* Warm peach */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #D2691E;
+    color: #FFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #8B4513;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the section */
+}
+
+/* Featured Products Section */
+#featured-products {
+    background-color: #FAD0D2; /* Soft pink */
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* Fixed height to maintain uniformity */
+    object-fit: cover; /* Ensures images cover the space without distortion */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Menu Section */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    width: 250px;
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px; /* Fixed height to maintain uniformity */
+    object-fit: cover; /* Ensures images cover the space without distortion */
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.menu-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* About Section */
+#about-us {
+    background-color: #FAD0D2; /* Soft pink */
+}
+
+#about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+#about-us p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact-us {
+    background-color: #FFF7E6;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form label {
+    font-size: 1.2em;
+    color: #5C3D2E;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D2691E;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background-color: #D2691E;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #8B4513;
+}
+
+/* Footer */
+footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .footer-nav {
+    margin-top: 10px;
+}
+
+footer .footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-nav a:hover {
+    color: #FAD0D2; /* Soft pink */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
